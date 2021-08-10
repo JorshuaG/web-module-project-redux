@@ -4,6 +4,7 @@ import MovieListItem from "./MovieListItem";
 import MovieFooter from "./MovieFooter";
 import { deleteMovie } from "../actions/movieActions";
 
+
 const MovieList = (props) => {
   const movies = props.movies;
 
