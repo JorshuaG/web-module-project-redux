@@ -1,4 +1,4 @@
-import { ADD_FAV, DEL_FAV } from "../actions/favoriteActions";
+import { ADD_FAV, DEL_FAV, TOG_FAV } from "../actions/favoriteActions";
 
 const initialState = {
   favorites: [],
@@ -16,6 +16,8 @@ const favReducer = (state = initialState, action) => {
       return {
         favorites: state.favorites.filter((item) => action.payload !== item.id),
       };
+    case TOG_FAV:
+      return { ...state, displayFavorites: action.payload };
 
     default:
       return state;
